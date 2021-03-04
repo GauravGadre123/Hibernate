@@ -17,30 +17,9 @@ public class Test {
 		Session session = buildSessionFactory.openSession();
 		Transaction transaction = session.beginTransaction();
 
-		Laptop laptop1 = new Laptop();
-		laptop1.setLaptopName("dell");
+		Student student2 = session.get(Student.class, 1);
 		
-
-		Laptop laptop2 = new Laptop();
-		laptop2.setLaptopName("hp");
-		
-		List<Laptop> laptops= new ArrayList<Laptop>();
-		laptops.add(laptop1);
-		laptops.add(laptop2);
-
-		Student student = new Student();
-		student.setStudentName("ramesh");
-		student.setLaptops(laptops);
-		
-
-		laptop1.setStudent(student);
-
-		laptop2.setStudent(student);
-		
-		session.save(student);
-		
-		
-		
+		System.out.println(student2);
 		
 		transaction.commit();
 		session.close();

@@ -14,13 +14,13 @@ public class Test {
 		Session session = buildSessionFactory.openSession();
 		Transaction transaction = session.beginTransaction();
 		
-		/*  to save data
+		/*  to save data 
 		
 		Student st = new Student();
 		st.setName("ram");
 		session.save(st);
-		 
 		 */
+		
 		
        /*  to update data
 		
@@ -40,12 +40,14 @@ public class Test {
 		
 		*/
 		
-	     /* to get data from id
+	     /* to get data from id     */
 	      
-		Student student = session.get(Student.class,3 );
-        System.out.println(student);
-
-         */
+		Student student = session.get(Student.class,1 );
+        System.out.println("get called = "+student);
+        
+        Student student1 = session.load(Student.class,1 );
+        System.out.println("loading called = "+ student1);
+      
 		  
         transaction.commit();
 
