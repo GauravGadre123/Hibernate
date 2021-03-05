@@ -11,7 +11,7 @@ import org.hibernate.cfg.Configuration;
 public class Test {
 
 	public static void main(String[] args) {
-
+ 
 		Configuration cfg = new Configuration().configure("com/techno/session7/hbm.cfg.xml");
 		SessionFactory buildSessionFactory = cfg.buildSessionFactory();
 		Session session = buildSessionFactory.openSession();
