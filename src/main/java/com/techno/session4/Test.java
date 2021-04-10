@@ -12,7 +12,7 @@ public class Test {
 
 	public static void main(String[] args) {
 
-		Configuration cfg = new Configuration().configure("com/techno/session2/hbm.cfg.xml");
+		Configuration cfg = new Configuration().configure("com/techno/session4/hbm.cfg.xml");
 		SessionFactory buildSessionFactory = cfg.buildSessionFactory();
 		Session session = buildSessionFactory.openSession();
 		Transaction transaction = session.beginTransaction();
