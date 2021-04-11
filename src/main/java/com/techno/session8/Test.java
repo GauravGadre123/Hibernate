@@ -28,7 +28,7 @@ public class Test {
 		System.out.println(student1);
 
 		transaction1.commit();
-		session1.close();
+		session1.close(); 
 
 		Session session2 = buildSessionFactory.openSession();
 		Transaction transaction2 = session2.beginTransaction();
