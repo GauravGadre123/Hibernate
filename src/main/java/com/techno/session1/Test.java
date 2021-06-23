@@ -27,7 +27,7 @@ public class Test {
 		Student st = new Student();
 		st.setId(2);
 		st.setName("ramesh");
-		session.save(st);
+		session.saveOrupdate(st);
 		 
 		 */
 		
